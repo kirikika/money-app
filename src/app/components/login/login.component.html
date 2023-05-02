@@ -1,17 +1,22 @@
 <div class="login-page">
   <div class="app-logo">
-    A
+    <img src="assets/logo.svg">
+    <div class="text">
+      Get in control of your
+    </div>
+    <div class="finances">
+      Finances
+    </div>
   </div>
-  <div class="text">
-    Get in control of your
-  </div>
-  <div class="finances">
-    Finances
+
+  <div class="btn mb">
+    <app-button [textButton]="'Log in'" [type]="buttonType.cancel" (click)="login('auth')"></app-button>
   </div>
   <div class="btn">
-    <app-button [textButton]="'Log in'" [type]="buttonType.cancel" (click)="login()"></app-button>
+    <app-button [textButton]="'Sign up'" (click)="login('create')"></app-button>
   </div>
-  <div class="btn">
-    <app-button [textButton]="'Sign up'"></app-button>
+
+  <div class="new-account">
+    Create new account
   </div>
 </div>

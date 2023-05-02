@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -7,14 +7,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent  implements OnInit {
-
+  public pageType: 'create' | 'auth' = 'auth'
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _route: ActivatedRoute
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this._route.params.subscribe(route => {
+      this.pageType = route['type'];
+      console.log(route['type']);
+    })
+  }
 
   public auth() {
     this._router.navigate(['tabs']);
+  }
+
+  public back(): void {
+    this._router.navigate(['']);
+  }
+
+  public navigate(): void {
+    if (this.pageType === 'create') {
+      this._router.navigate(['auth/auth']);
+    } else {
+      this._router.navigate(['auth/create']);
+    }
   }
 }

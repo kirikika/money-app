@@ -1,19 +1,47 @@
-<div class="auth-page">
-  <div class="auth-social">
-    Log in with one of the following steps.
+<ion-header>
+  <div class="header">
+    <div class="header__back" (click)="back()">
+      <img src="assets/back.svg" alt="" >
+    </div>
+    <div class="header__title">
+      {{pageType === 'auth' ? 'Login' : 'Sign up'}}
+    </div>
   </div>
-  <div class="socials">
-    <div class="socials__social">VK</div>
-    <div class="socials__social">TW</div>
-    <div class="socials__social">G</div>
-    <div class="socials__social">F</div>
+</ion-header>
+<ion-content>
+  <div class="auth-page">
+    <div class="auth-social">
+     {{pageType === 'auth' ? 'Log in with one of the following steps.' : 'Sign up with one of the following steps.'}}
+    </div>
+    <div class="socials">
+      <div class="socials__social">
+        <img src="assets/socials/icon_vk.svg" alt="">
+      </div>
+      <div class="socials__social">
+        <img src="assets/socials/icon_twitter.svg" alt="">
+      </div>
+      <div class="socials__social">
+        <img src="assets/socials/icon_google.svg" alt="">
+      </div>
+      <div class="socials__social">
+        <img src="assets/socials/icon_facebook.svg" alt="">
+      </div>
+    </div>
+    <div class="input" *ngIf="pageType === 'create'">
+      <app-input [labelText]="'Name'" [placeholderText]="'Enter your name here'"></app-input>
+    </div>
+    <div class="input">
+      <app-input [labelText]="'Email'" [placeholderText]="'Enter your email here'"></app-input>
+    </div>
+    <div class="input">
+      <app-input [labelText]="'Password'" [type]="'password'" [placeholderText]="'Enter your password here'"></app-input>
+    </div>
+    <div class="btn">
+      <app-button [textButton]="pageType === 'auth' ? 'Login' : 'Sign up'" (click)="auth()"></app-button>
+    </div>
+    <div class="have-account">
+      <span>{{pageType === 'auth'? 'Don’t have an account?' : 'Already have an account?'}} </span>
+      <a class="a" (click)="navigate()">{{pageType === 'auth'? 'Sign up' : 'Log in'}}</a>
+    </div>
   </div>
-  <app-input [labelText]="'Email'" [labelText]="'Enter your email here'"></app-input>
-  <app-input [labelText]="'Password'" [labelText]="'Enter your password here'"></app-input>
-  <div class="btn">
-    <app-button [textButton]="'Log in'" (click)="auth()"></app-button>
-  </div>
-  <div class="have-account">
-    <span>Don’t have an account? </span><a>Sign up</a>
-  </div>
-</div>
+</ion-content>

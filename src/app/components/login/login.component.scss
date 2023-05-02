@@ -11,12 +11,58 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: sizeHeight(30) sizeWidth(30);
+    padding: sizeHeight(300) sizeWidth(60) sizeHeight(30);
     background-color: #121214;
-}
+    font-family: 'Rubik';
+    font-style: normal;
 
-.btn {
-    width: 100%;
-    margin-bottom: sizeHeight(30) ;
+    .app-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #E1EE86;
+
+        margin-bottom: sizeHeight(55);
+
+        img {
+            margin-bottom: sizeHeight(75);
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: sizeHeight(15);
+        }
+
+        .finances {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 24px;
+        }
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .mb {
+        margin-bottom: 30px ;
+    }
+
+    .new-account {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        color: #EDEEF0;
+        margin-top: 10px;
+    }
 }

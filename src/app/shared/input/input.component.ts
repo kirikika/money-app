@@ -10,6 +10,8 @@ export class InputComponent  implements OnInit {
   public labelText: string = '';
   @Input()
   public placeholderText: string = ''; 
+  @Input()
+  public type: 'text' | 'number' | 'password' = 'text'; 
 
   constructor() { }
 

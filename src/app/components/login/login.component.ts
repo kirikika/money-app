@@ -15,7 +15,7 @@ export class LoginComponent  implements OnInit {
 
   ngOnInit() {}
 
-  public login() {
-    this._router.navigate(['auth']);
+  public login(type: 'auth' | 'create'):void {
+    this._router.navigate(['auth', type]);
   }
 }

@@ -8,14 +8,18 @@
 
 .app-button {
     width: 100%;
-    height: sizeHeight(40);
-    border-radius: sizeHeight(10);
+    padding: 10px;
+    border-radius: 10px;
     background-color: #E1EE86;
     color: #141414;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &__text {
+        height: 20px;
+    }
 }
 
 .cancel {

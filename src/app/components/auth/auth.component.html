@@ -1,0 +1,19 @@
+<div class="auth-page">
+  <div class="auth-social">
+    Log in with one of the following steps.
+  </div>
+  <div class="socials">
+    <div class="socials__social">VK</div>
+    <div class="socials__social">TW</div>
+    <div class="socials__social">G</div>
+    <div class="socials__social">F</div>
+  </div>
+  <app-input [labelText]="'Email'" [labelText]="'Enter your email here'"></app-input>
+  <app-input [labelText]="'Password'" [labelText]="'Enter your password here'"></app-input>
+  <div class="btn">
+    <app-button [textButton]="'Log in'" (click)="auth()"></app-button>
+  </div>
+  <div class="have-account">
+    <span>Don’t have an account? </span><a>Sign up</a>
+  </div>
+</div>

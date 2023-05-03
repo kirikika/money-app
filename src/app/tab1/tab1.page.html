@@ -1,17 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="mainContainer">
+  <div class="headerBlock">
+    <div class="nameDate">
+      <div class="userName">Vladislav</div>
+      <div class="actualDate">Sun , 1 September</div>
+    </div>
+    <div class="settings">
+      <img src="assets/images/Add.svg" class="add" alt=""> 
+      <img src="assets/images/Notification.svg" class="notification" alt="">
+      <img src="assets/images/Settings.svg" class="settings_img" alt="">
+    </div>
+  </div>
+  <div class="debCred"></div>
+  <div class="subscription" (click)="showTransaction()">
+    Subscriptions
+  </div>
+  <ng-container *ngIf="isShowTransaction">
+    <div class="transaction">
+      transactions
+    </div>
+    <div class="banks">
+      <div class="topName"></div>
+    </div>
+  </ng-container>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Костя пидр</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+</div>

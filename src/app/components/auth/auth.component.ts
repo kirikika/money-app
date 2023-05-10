@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { log } from 'console';
 
 @Component({
   selector: 'app-auth',
@@ -16,8 +17,9 @@ export class AuthComponent  implements OnInit {
   ngOnInit() {
     this._route.params.subscribe(route => {
       this.pageType = route['type'];
-      console.log(route['type']);
     })
+    console.log('hello');
+    
   }
 
   public auth() {

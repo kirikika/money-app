@@ -1,7 +1,12 @@
+<link rel="stylesheet" href="tab1.page.scss">
+
 <div class="mainContainer">
   <div class="headerBlock">
     <div class="nameDate">
-      <div class="userName">Vladislav</div>
+      <div class="userName">
+        <div>Vladislav</div>
+        <img src="assets/images/arrow-right.svg" alt="">
+      </div>
       <div class="actualDate">Sun , 1 September</div>
     </div>
     <div class="settings">
@@ -10,7 +15,9 @@
       <img src="assets/images/Settings.svg" class="settings_img" alt="">
     </div>
   </div>
-  <div class="debCred"></div>
+  <debit-credit-info></debit-credit-info>
+  <debit-credit-info [cards]="cards2"></debit-credit-info>
+  
   <div class="subscription" (click)="showTransaction()">
     Subscriptions
   </div>

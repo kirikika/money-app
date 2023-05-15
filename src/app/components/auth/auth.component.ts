@@ -8,6 +8,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AuthComponent  implements OnInit {
   public pageType: 'create' | 'auth' = 'auth'
+  public correctLogin: string = 'Vadim'
+  public correctPass: string = 'Vadim777'
+  
+  public  function(){
+  
+    if(this.correctLogin === 'Vadim' && this.correctPass === 'Vadim777'){
+      return 'Welcome'
+    }
+    else {
+      return 'Not correct login and password'
+    }
+
+  }
+
   constructor(
     private _router: Router,
     private _route: ActivatedRoute

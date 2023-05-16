@@ -9,7 +9,47 @@ export class Tab2Page implements OnInit {
   public balanceHistory: any[] = [
     {
       time: new Date(),
-      icon: '',
+      icon: 'apple',
+      market: 'Apple Store',
+      type: 'Appstore payment',
+      balance: 5000,
+      card: 'Debit'
+    },
+    {
+      time: new Date(),
+      icon: 'yandex',
+      market: 'Yandex Store',
+      type: 'Yandexstore',
+      balance: 2000,
+      card: 'Credit'
+    },
+    {
+      time: new Date(),
+      icon: 'food',
+      market: 'Food Store',
+      type: 'Products',
+      balance: 2000,
+      card: 'Credit'
+    },
+    {
+      time: new Date(),
+      icon: 'alex',
+      market: 'Alex Blackson',
+      type: 'Transfers',
+      balance: 2000,
+      card: 'Credit'
+    },
+    {
+      time: new Date(),
+      icon: 'google',
+      market: 'Google',
+      type: 'Products',
+      balance: 2000,
+      card: 'Credit'
+    },
+    {
+      time: new Date(),
+      icon: 'apple',
       market: 'Apple Store',
       type: 'Products',
       balance: 5000,
@@ -17,12 +57,37 @@ export class Tab2Page implements OnInit {
     },
     {
       time: new Date(),
-      icon: '',
+      icon: 'google',
+      market: 'Google',
+      type: 'Products',
+      balance: 2000,
+      card: 'Credit'
+    },
+    {
+      time: new Date(),
+      icon: 'yandex',
       market: 'Yandex Store',
       type: 'Products',
       balance: 2000,
       card: 'Credit'
-    }
+    },
+    {
+      time: new Date(),
+      icon: 'food',
+      market: 'Food Store',
+      type: 'Products',
+      balance: 2000,
+      card: 'Credit'
+    },
+    {
+      time: new Date(),
+      icon: 'food',
+      market: 'Food Store',
+      type: 'Products',
+      balance: 2000,
+      card: 'Credit'
+    },
+
   ];
   public filteredBalanceHistory: any[] = [];
   public search: string = '';
@@ -38,7 +103,6 @@ export class Tab2Page implements OnInit {
     this.filteredBalanceHistory = this.balanceHistory.filter(balanceItem => {
       return balanceItem.market.toLocaleLowerCase().startsWith(event.toLocaleLowerCase())
     })
-    console.log(this.filteredBalanceHistory);
   }
 }
 

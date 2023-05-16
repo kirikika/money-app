@@ -1,17 +1,31 @@
 
 <div class="mainContainer">
+<div class="line2"><img src="assets/images/line2.svg"></div>
 <div>
-    <h1 class="text-center">Banks search</h1>
- </div>
+    <h1 class="text-center" style="text-align: center; color: #E1EE86
+    ;">Payment History</h1>
  <div class="form-control-group">
    <input type="text" class="search" [(ngModel)]="search" (ngModelChange)="doSearch($event)">
  </div>
+ <div class="setting">
+  <div class="leftSide">
+    <div class="debit">Debit</div>
+  <div class="lastTime">Last 2 weeks</div>
+  <div class="closeIcon"><img src="assets/images/iconClose.svg"></div>
+  </div>
+  <div class="rightSide">
+    <div class="iconSort"><img src="assets/images/iconSort.svg"></div>
+    <div class="iconFilter"><img src="assets/images/iconFilter.svg"></div>
+    <div class="iconCards"><img src="assets/images/iconCards.svg"></div>
+  </div>
+ </div>
+ <div class="today">Today</div>
  <div>
-<div *ngFor="let balanceItem of filteredBalanceHistory">
-  {{balanceItem.market}}
+  <div *ngFor="let balanceItem of filteredBalanceHistory" class="paymentItem">
+  <payment-history [market]="balanceItem"></payment-history>
 </div>
  </div>
+ 
 </div>
-
 
  

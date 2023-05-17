@@ -1,6 +1,113 @@
 .mainContainer{
-    width: 100vw;
     height: 100vh;
     display:flex;
     flex-direction: column;
+    background-color: #1E1E1E;
+
+    .line2{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+
+    .setting{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3px;
+
+        .lastTime{
+            background-color:#E1EE86;
+            height: 20px;
+            margin-left: 5px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 10px;
+            padding-left: 12px;
+            padding-right: 12px;
+            display: flex;
+            align-items: center;
+
+        }
+    }
+
+    .leftSide{
+        display: flex;
+
+
+        .debit{
+        background-color:#E1EE86;
+        width: 60px;
+        height: 20px;
+        margin-left: 16px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        display: flex;
+        align-items: center;
+
+        ;
+        }
+    }
+
+    .rightSide{
+        display: flex;
+    }
+
+    .search{
+        width: calc(100% - 20px);
+        height: 32px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        background-color: #5e5f63;
+    }
+     
+    .paymentItem{
+        background-color: #1E1E1E;
+    }
+}
+
+
+.balanceCard{
+    flex-direction: column;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.text-center{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.closeIcon{
+    width: 20px;
+    height: 20px;
+    background-color: #5E5F63;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.iconCards{
+    margin-right: 10px;
+}
+
+.iconFilter{
+    margin-right: 10px;
+}
+.iconSort{
+    margin-right: 10px;
+}
+
+.today{
+    color: #5E5F63;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: 15px;
 }

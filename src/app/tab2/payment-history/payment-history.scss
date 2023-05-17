@@ -1,0 +1,59 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    .marketStyle{
+        font-size: 16px;
+        color: #E1EE86;
+    }
+
+    .timePay{
+        margin-left: 15px;
+        font-size: 10px;
+        color:#5E5F63;
+        ;
+    }
+}   
+    .typeStyle{
+        font-size: 10px;
+        color: #5E5F63;
+    }
+
+    .balanceStyle{
+        font-size: 14px;
+        color: #E0E0E0;
+    }
+
+    .cardStyle{
+        font-size: 10px;
+        color: #5E5F63;
+    }
+    
+    .leftContainer{
+        display: flex;
+        align-items: center;
+        width: 200px;
+    }
+
+    .iconStyle{
+        margin-left: 15px;
+        color: #5E5F63 ;
+        
+    }
+
+    .marketType{
+        flex-direction: column;
+
+    }
+    
+    .timeIcon{
+        display: flex;
+        align-items: center;
+        width: 100px;
+    }
+
+.setting{
+    margin-bottom: 50px;
+}

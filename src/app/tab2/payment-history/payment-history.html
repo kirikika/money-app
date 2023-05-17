@@ -1,0 +1,18 @@
+<div class="card">
+   <div class="leftContainer">
+    <div class="timeIcon">
+     <div class="timePay">{{market.time | date: "HH:mm"}}</div>
+     <div class="iconStyle">
+      <img src="assets/images/{{market.icon}}.svg">
+    </div>
+   </div>
+    <div class="marketType">
+      <div class="marketStyle">{{market.market}}</div>
+      <div class="typeStyle">{{market.type}}</div>
+    </div>
+   </div>
+   <div class="balanceCard" style="margin-right: 17px; margin-top: 4px;">
+       <div class="balanceStyle">{{market.balance}}</div>
+       <div class="cardStyle">{{market.card}}</div>
+   </div>
+</div>

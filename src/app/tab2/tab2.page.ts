@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Tab2Page implements OnInit {
   public balanceHistory: any[] = [
     {
-      time: new Date(),
+      time: new Date('December 17, 1995 03:00:00'),
       icon: 'apple',
       market: 'Apple Store',
       type: 'Appstore payment',
@@ -16,7 +16,7 @@ export class Tab2Page implements OnInit {
       card: 'Debit'
     },
     {
-      time: new Date(),
+      time: new Date('December 10, 2001 03:00:00'),
       icon: 'yandex',
       market: 'Yandex Store',
       type: 'Yandexstore',
@@ -24,7 +24,7 @@ export class Tab2Page implements OnInit {
       card: 'Credit'
     },
     {
-      time: new Date(),
+      time: new Date('December 17, 1995 03:24:00'),
       icon: 'food',
       market: 'Food Store',
       type: 'Products',
@@ -40,7 +40,7 @@ export class Tab2Page implements OnInit {
       card: 'Credit'
     },
     {
-      time: new Date(),
+      time: new Date('December 10, 2001 03:00:00'),
       icon: 'google',
       market: 'Google',
       type: 'Products',
@@ -89,6 +89,7 @@ export class Tab2Page implements OnInit {
     },
 
   ];
+  public filters: string[] = ['last 2 Week', 'debit'];
   public filteredBalanceHistory: any[] = [];
   public search: string = '';
   constructor() {
@@ -97,12 +98,19 @@ export class Tab2Page implements OnInit {
 
   public ngOnInit(): void {
     this.filteredBalanceHistory = this.balanceHistory;
+    this.sortedByDate()
   }
-
+  public sortedByDate(){
+    this.filteredBalanceHistory.sort((a, b) => b.time-a.time)
+  }
   public doSearch(event: string) {
     this.filteredBalanceHistory = this.balanceHistory.filter(balanceItem => {
-      return balanceItem.market.toLocaleLowerCase().startsWith(event.toLocaleLowerCase())
+      return balanceItem.market.toLocaleLowerCase().includes(event.toLocaleLowerCase())
     })
   }
+  public deleteFilter(){
+    this.filters.pop()
+  }
+
 }
 

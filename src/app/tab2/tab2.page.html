@@ -9,9 +9,8 @@
  </div>
  <div class="setting">
   <div class="leftSide">
-    <div class="debit">Debit</div>
-  <div class="lastTime">Last 2 weeks</div>
-  <div class="closeIcon"><img src="assets/images/iconClose.svg"></div>
+    <div *ngFor="let filter of filters" class="filter">{{filter}}</div>
+    <div class="closeIcon" (click)="deleteFilter()" *ngIf="filters.length !== 0"><img src="assets/images/iconClose.svg"></div>
   </div>
   <div class="rightSide">
     <div class="iconSort"><img src="assets/images/iconSort.svg"></div>
@@ -19,11 +18,12 @@
     <div class="iconCards"><img src="assets/images/iconCards.svg"></div>
   </div>
  </div>
- <div class="today">Today</div>
- <div>
+
+ <div class="historyArray">
   <div *ngFor="let balanceItem of filteredBalanceHistory" class="paymentItem">
-  <payment-history [market]="balanceItem"></payment-history>
-</div>
+    <div class="today">{{balanceItem.time | date: 'dd.MM.YYYY'}}</div>
+    <payment-history [market]="balanceItem"></payment-history>
+  </div>
  </div>
  
 </div>

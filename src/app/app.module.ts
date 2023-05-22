@@ -9,13 +9,14 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './components/login/login.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AngularSvgIconModule.forRoot(), IonicModule.forRoot(), AppRoutingModule, LoginModule, SharedModule, 
     
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

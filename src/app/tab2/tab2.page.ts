@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -92,24 +93,40 @@ export class Tab2Page implements OnInit {
   public filters: string[] = ['last 2 Week', 'debit'];
   public filteredBalanceHistory: any[] = [];
   public search: string = '';
-  constructor() {
-
+  public today = new Date()
+  public filteredDates: (string | null)[] = []
+  constructor(public datePipe: DatePipe) {
+ 
   }
 
   public ngOnInit(): void {
     this.filteredBalanceHistory = this.balanceHistory;
-    this.sortedByDate()
+    this.sortedByDate();
+    this.filterDate();
   }
   public sortedByDate(){
     this.filteredBalanceHistory.sort((a, b) => b.time-a.time)
   }
   public doSearch(event: string) {
+    this.filteredDates = []
     this.filteredBalanceHistory = this.balanceHistory.filter(balanceItem => {
       return balanceItem.market.toLocaleLowerCase().includes(event.toLocaleLowerCase())
     })
+    this.filterDate()
   }
   public deleteFilter(){
     this.filters.pop()
+  }
+  public filterDate(){
+    this.filteredBalanceHistory
+    .map((element) => this.datePipe.transform(element.time))
+    .forEach((item, pos) => {
+      if (this.filteredBalanceHistory.map((element) => this.datePipe.transform(element.time)).indexOf(item) === pos){
+        this.filteredDates.push(item)
+      }else{
+        this.filteredDates.push('')
+      }
+    })
   }
 
 }

@@ -17,6 +17,5 @@ import { Component, Input, OnInit } from "@angular/core";
     }
 
     public ngOnInit(): void {
-      console.log(this.market);
     }
   }

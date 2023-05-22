@@ -2,8 +2,7 @@
 <div class="mainContainer">
 <div class="line2"><img src="assets/images/line2.svg"></div>
 <div>
-    <h1 class="text-center" style="text-align: center; color: #E1EE86
-    ;">Payment History</h1>
+    <h1 class="text-center" style="text-align: center; color: #E1EE86">Payment History</h1>
  <div class="form-control-group">
    <input type="text" class="search" [(ngModel)]="search" (ngModelChange)="doSearch($event)">
  </div>
@@ -20,12 +19,11 @@
  </div>
 
  <div class="historyArray">
-  <div *ngFor="let balanceItem of filteredBalanceHistory" class="paymentItem">
-    <div class="today">{{balanceItem.time | date: 'dd.MM.YYYY'}}</div>
+  <div *ngFor="let balanceItem of filteredBalanceHistory index as i" class="paymentItem">
+    <div class="today">{{filteredDates[i] === (today | date) ? 'Today' : filteredDates[i]}}</div>
     <payment-history [market]="balanceItem"></payment-history>
   </div>
  </div>
  
 </div>
-
  

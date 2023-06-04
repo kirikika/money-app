@@ -28,17 +28,60 @@
         }
 
         .topicTab {
-            font-size: 2.3vh;
+            font-size: 2.9vh;
             align-self: center;
             margin-left: 1.3vw;
+            font-weight: 600;
         }
     }
-    .settings {
+    .options {
         display: flex;
         justify-content: flex-end;
     
         img {
-            margin-left:24px ;
+            margin-left:4.6vw;
         }
+    }
+}
+.banks {
+    height: 82.6vh;
+    margin-top: 2vh;
+    margin-left: 5.6vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .bank {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 25.8vh;
+        margin-top: 3vh;
+        flex-direction: column;
+
+        .bankName {
+            height: 2.3vh;
+            font-size: 2.3vh;
+            font-weight: 600;
+            color: #E1EE86;
+            overflow: hidden;
+        }
+        .cards {
+            height: 21.5vh;
+            margin-top: 2vh;
+            display: flex;
+            float: left;
+
+            .card {
+                height: 21.5vh;
+                width: 38vh;     
+
+                .picture {
+                    margin-right: 3vw;
+                    height: 100%;
+                }
+            }
+
+        }
+
     }
 }

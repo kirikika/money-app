@@ -5,9 +5,23 @@
       <div class="topicTab"> Debit</div>
     </div>
     <div>
-      <div class="settings">
-        <img src="assets/images/Add.svg" class="add" alt=""> 
+      <div class="options">
+        <img src="assets/images/Add.svg" class="add" alt="">
         <img src="assets/images/Notification.svg" class="notification" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="banks">
+    <div class="bank" *ngFor="let nameOfBank of filteredBanks">
+      <div class="bankName">
+        {{nameOfBank}}
+      </div> 
+      <div class="cards" >
+        <ng-container *ngFor="let cardOfBank of filteredCards index as i">
+          <div class="card" *ngIf="filteredCards[i].bank === nameOfBank">
+            <img class="picture" src="assets/cards/{{cardOfBank.cardPicture}}.svg">
+          </div> 
+        </ng-container> 
       </div>
     </div>
   </div>

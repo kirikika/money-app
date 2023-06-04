@@ -100,12 +100,14 @@ export class Tab2Page implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.filteredBalanceHistory = this.balanceHistory;
+    this.balanceHistory.forEach((element) => {
+      this.filteredBalanceHistory.push(element)
+    });
     this.sortedByDate();
     this.filterDate();
   }
   public sortedByDate(){
-    this.filteredBalanceHistory.sort((a, b) => b.time-a.time)
+    this.filteredBalanceHistory.sort((a, b) => b.time-a.time);
   }
   public doSearch(event: string) {
     this.filteredDates = []

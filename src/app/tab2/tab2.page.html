@@ -2,28 +2,30 @@
 <div class="mainContainer">
 <div class="line2"><img src="assets/images/line2.svg"></div>
 <div>
-    <h1 class="text-center" style="text-align: center; color: #E1EE86">Payment History</h1>
- <div class="form-control-group">
-   <input type="text" class="search" [(ngModel)]="search" (ngModelChange)="doSearch($event)">
- </div>
- <div class="setting">
-  <div class="leftSide">
-    <div *ngFor="let filter of filters" class="filter">{{filter}}</div>
-    <div class="closeIcon" (click)="deleteFilter()" *ngIf="filters.length !== 0"><img src="assets/images/iconClose.svg"></div>
+  <h1 class="text-center" style="text-align: center; color: #E1EE86">Payment History</h1>
+  <div class="form-control-group">
+    <input type="text" class="search" [(ngModel)]="search" (ngModelChange)="doSearch($event)">
   </div>
-  <div class="rightSide">
-    <div class="iconSort"><img src="assets/images/iconSort.svg"></div>
-    <div class="iconFilter"><img src="assets/images/iconFilter.svg"></div>
-    <div class="iconCards"><img src="assets/images/iconCards.svg"></div>
+  <div class="setting">
+    <div class="leftSide">
+      <div *ngFor="let filter of filters" class="filter">{{filter}}</div>
+      <div class="closeIcon" (click)="deleteFilter()" *ngIf="filters.length !== 0">
+        <img src="assets/images/iconClose.svg">
+      </div>
+    </div>
+    <div class="rightSide">
+      <div class="iconSort"><img src="assets/images/iconSort.svg"></div>
+      <div class="iconFilter"><img src="assets/images/iconFilter.svg"></div>
+      <div class="iconCards"><img src="assets/images/iconCards.svg"></div>
+    </div>
   </div>
- </div>
 
- <div class="historyArray">
-  <div *ngFor="let balanceItem of filteredBalanceHistory index as i" class="paymentItem">
-    <div class="today">{{filteredDates[i] === (today | date) ? 'Today' : filteredDates[i]}}</div>
-    <payment-history [market]="balanceItem"></payment-history>
+  <div class="historyArray">
+    <div *ngFor="let balanceItem of filteredBalanceHistory index as i" class="paymentItem">
+      <div class="today">{{filteredDates[i] === (today | date) ? 'Today' : filteredDates[i]}}</div>
+      <payment-history [market]="balanceItem"></payment-history>
+    </div>
   </div>
- </div>
  
 </div>
  

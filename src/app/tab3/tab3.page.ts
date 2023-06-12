@@ -9,58 +9,72 @@ export class Tab3Page{
   public cards:     {
     cardPicture: string,
     bank: string,
-    number: string,
+    requisites: string,
     balance: number,
     spent: number,
-    typeOfCard: string
+    type: string,
+    typeOfCard: string,
+    currency: string
   }[] = [
     {
       cardPicture: 'Tinkoff_1',
       bank: 'Tinkoff',
-      number: '...8464',
+      requisites: '...8464',
       balance: 50000,
       spent: 45000,
-      typeOfCard: 'Debit'
+      type: 'Debit',
+      typeOfCard: 'MasterCard',
+      currency: '₽'
     },
     {
       cardPicture: 'Tinkoff_Black_1',
       bank: 'Tinkoff',
-      number: '...0070',
+      requisites: '...0070',
       balance: 10000,
       spent: 5000,
-      typeOfCard: 'Debit'
+      type: 'Debit',
+      typeOfCard: 'VISA',
+      currency: '$'
     },
     {
       cardPicture: 'Sberbank_1',
       bank: 'Sber',
-      number: '...2193',
+      requisites: '...2193',
       balance: 10000,
       spent: 10000,
-      typeOfCard: 'Debit'
+      type: 'Debit',
+      typeOfCard: 'МИР',
+      currency: '₽'
     },
     {
       cardPicture: 'Alfabank_2',
       bank: 'Alfa',
-      number: '...0001',
+      requisites: '...0001',
       balance: 32130,
       spent: 540,
-      typeOfCard: 'Debit'
+      type: 'Debit',
+      typeOfCard: 'VISA',
+      currency: '₽'
     },
     {
       cardPicture: 'Tinkoff_2',
       bank: 'Tinkoff',
-      number: '...8080',
+      requisites: '...8080',
       balance: 300000,
       spent: 4000,
-      typeOfCard: 'Debit'
+      type: 'Debit',
+      typeOfCard: 'VISA',
+      currency: '₽'
     },
     {
       cardPicture: 'Alfabank_1',
       bank: 'Alfa',
-      number: '...6453',
+      requisites: '...6453',
       balance: 25000,
       spent: 50000,
-      typeOfCard: 'Debit'
+      type: 'Debit',
+      typeOfCard: 'MasterCard',
+      currency: '$'
     }
   ];
   public filteredCards: any[] = [];

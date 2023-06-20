@@ -1,0 +1,30 @@
+<div class="mainContainer">
+  <div class="headerBlock">
+    <div class="userName" (click)="redirectToInfo()">
+      <img src="assets/images/arrow-left.svg" alt="">
+      <div class="topicTab"> {{tOfCard === 'debit' ? 'Debit' : 'Credit'}}</div>
+    </div>
+    <div>
+      <div class="options">
+        <img src="assets/images/Add.svg" class="add" alt="">
+        <img src="assets/images/Notification.svg" class="notification" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="banks">
+    <div class="bank" *ngFor="let nameOfBank of filteredBanks">
+      <div class="bankName">
+        {{nameOfBank}}
+      </div> 
+      <div class="cards" >
+        <ng-container *ngFor="let cardOfBank of filteredCards index as i">
+          <app-card 
+          *ngIf="filteredCards[i].bank === nameOfBank && filteredCards[i].type === tOfCard" 
+          [cardOfBank]="cardOfBank"
+          (click)="toCardGraph()">
+          </app-card>
+        </ng-container> 
+      </div>
+    </div>
+  </div>
+</div>

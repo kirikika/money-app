@@ -1,5 +1,5 @@
 <div class="debCred">
-    <div class="card" *ngFor="let card of cards">
+    <div class="card" *ngFor="let card of cards" (click)="redirectToCards(card.type)">
       <div class="card__info">
         <div class="name">{{card?.name}}</div>
         <div class="value">{{card?.value}}</div>

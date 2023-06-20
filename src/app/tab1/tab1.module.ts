@@ -7,6 +7,10 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { DebitCreditInfoComponent } from '../debit-credit-info/debit-credit-info.component';
+import { BanksPage } from './banks/banks.page';
+import { CardComponent } from './banks/card/card.component';
+import { GraphComponent } from './banks/graph/graph.component';
+
 
 @NgModule({
   imports: [
@@ -15,8 +19,8 @@ import { DebitCreditInfoComponent } from '../debit-credit-info/debit-credit-info
     FormsModule,
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
-    SharedModule
+    SharedModule,
   ],
-  declarations: [Tab1Page, DebitCreditInfoComponent]
+  declarations: [Tab1Page, DebitCreditInfoComponent, BanksPage, CardComponent, GraphComponent]
 })
 export class Tab1PageModule {}

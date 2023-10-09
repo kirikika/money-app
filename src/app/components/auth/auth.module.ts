@@ -6,11 +6,16 @@ import { IonicModule } from '@ionic/angular';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthRoutingModule} from './auth.routing.module';
 import { AuthComponent } from './auth.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
 @NgModule({
-  declarations: [AuthComponent],
+  declarations: [
+    AuthComponent,
+    SignUpComponent
+  ],
+
   imports: [
     CommonModule,
     SharedModule,

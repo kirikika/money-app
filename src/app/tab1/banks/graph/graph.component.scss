@@ -1,1 +1,83 @@
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e1e;
+    display:flex;
+    flex-direction: column;
+}
 
+.headerBlock{
+    width: 88.8vw;
+    height: 2.8vh; //24
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 5.6vw;
+    margin-right: 5.6vw;
+    margin-top: 6.6vh;
+
+    .userName{
+        color: #fff;
+        height: 2.3vh;
+        display: flex;
+
+        img {
+            width: 2vw;
+            height: 2vh;
+            align-self: center;
+        }
+
+        .topicTab {
+            font-size: 2.9vh;
+            align-self: center;
+            margin-left: 1.3vw;
+            font-weight: 600;
+        }
+    }
+    .options {
+        display: flex;
+        justify-content: flex-end;
+    
+        img {
+            margin-left:4.6vw;
+            height: 2.3vh;
+        }
+    }
+}
+.banks {
+    height: 80vh;
+    margin-top: 3vh;
+    margin-left: 5.6vw;
+    margin-right: 5.6vw;
+
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+
+    .bank {
+        // width: 100%;
+        // overflow-x: scroll;
+        // overflow-y: hidden;
+        // height: 25.8vh;
+        // margin-top: 3vh;
+        // margin-bottom: 1vh;
+        // flex-direction: column;
+
+        .bankName {
+            // position: sticky;
+            // left: 0%;
+            height: 2.3vh;
+            font-size: 2.3vh;
+            font-weight: 600;
+            color: #E1EE86;
+            // overflow: hidden;
+        }
+        .cards {
+            // height: 23.5vh;
+            margin-top: 2vh;
+            // display: flex;
+            // float: left;
+
+        }
+
+    }
+}

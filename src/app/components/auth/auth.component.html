@@ -1,10 +1,12 @@
 <ion-header>
   <div class="header">
-    <div class="header__back" (click)="back()">
-      <img src="assets/back.svg" alt="" >
-    </div>
-    <div class="header__title">
-      {{pageType === 'auth' ? 'Login' : 'Sign up'}}
+    <div class="title" (click)="back()">
+      <div class="header__back">
+        <img src="assets/back.svg" alt="" >
+      </div>
+      <div class="header__title">
+        {{pageType === 'auth' ? 'Login' : 'Sign up'}}
+      </div>
     </div>
   </div>
 </ion-header>
@@ -28,16 +30,21 @@
       </div>
     </div>
     <div class="input" *ngIf="pageType === 'create'">
-      <app-input [labelText]="'Name'" [placeholderText]="'Enter your name here'"></app-input>
+      <label class="text">Name</label>
+      <input class="inputData" [(ngModel)]="name" [placeholder]="'Enter your name here'">
     </div>
     <div class="input">
-      <app-input [labelText]="'Email'" [placeholderText]="'Enter your email here'"></app-input>
+      <label class="text">Login</label>
+      <input class="inputData" [(ngModel)]="login" [placeholder]="'Enter your login here'">
     </div>
     <div class="input">
-      <app-input [labelText]="'Password'" [type]="'password'" [placeholderText]="'Enter your password here'"></app-input>
+      <label class="text">Password</label>
+      <input class="inputData" type="password" [(ngModel)]="password" 
+      [placeholder]="'Enter your password here'"
+      >
     </div>
     <div class="btn">
-      <app-button [textButton]="pageType === 'auth' ? 'Login' : 'Sign up'" (click)="auth()"></app-button>
+      <app-button [textButton]="pageType === 'auth' ? 'Login' : 'Sign up'" (click)="toSignUp()"></app-button>
     </div>
     <div class="have-account">
       <span>{{pageType === 'auth'? 'Don’t have an account?' : 'Already have an account?'}} </span>

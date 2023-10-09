@@ -1,0 +1,57 @@
+<div class="mainContainer">
+  <div class="headerBlock">
+    <div class="userName" (click)="redirectToCreate()">
+      <img src="assets/images/arrow-left.svg" alt="">
+    </div>
+    <div>
+      <div class="options">
+        <img src="assets/images/Add.svg" class="add" alt="">
+        <img src="assets/images/Notification.svg" class="notification" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="person">
+    <div class="personPhoto">
+      <img class="photo" src="assets/person/photo.svg">
+      <img class="correct" src="assets/person/correct.svg" (click)="changeData()">
+    </div>
+    <div class="info">
+      <label class="text">Name</label>
+      <input class="inputData" [(ngModel)]="name" [disabled]="activation">
+    </div>
+    <div class="info">
+      <label class="text">Login</label>
+      <input class="inputData" [(ngModel)]="login" [disabled]="activation">
+    </div>
+    <div class="info">
+      <label class="text">Password</label>
+      <input class="inputData" type="password" [(ngModel)]="password" [disabled]="activation">
+    </div>
+    <div class="info">
+      <label class="text">Email</label>
+      <input class="inputData" type="email" [(ngModel)]="email" [disabled]="activation">
+    </div>
+    <div class="info">
+      <label class="text">Country</label>
+      <input class="inputData" [(ngModel)]="country" [disabled]="activation">
+    </div>
+    <div class="info">
+      <label class="text">Birthday</label>
+      <input class="inputData" type="date" value="today | date" [(ngModel)]="birthday" [disabled]="activation">
+    </div>
+    <div class="info">
+      <label class="text">Gender</label>
+      <select class="inputData" [(ngModel)]="gender" [disabled]="activation">
+        <option [value]="'male'">
+          male
+        </option>
+        <option [value]="'female'">
+          female
+        </option>
+      </select>
+    </div>
+    <div class="button">
+      <app-button [textButton]="'Save'" [type]="buttonType" (click)="save()"></app-button>
+    </div>
+  </div>
+</div>

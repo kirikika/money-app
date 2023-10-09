@@ -1,0 +1,75 @@
+{"cardSpents": [
+    {
+      "spent": 1300,
+      "requisites": "...6452",
+      "time": "2023-12-22",
+      "market": "Apple Store"
+    },
+    {
+      "spent": 200,
+      "requisites": "...6452",
+      "time": "2023-12-25",
+      "market": "Yandex store"
+    },
+    {
+      "spent": 2200,
+      "requisites": "...6452",
+      "time": "2023-12-22",
+      "market": "Apple Store"
+    },
+    {
+      "spent": 3200,
+      "requisites": "...6452",
+      "time": "2023-12-24",
+      "market": "Apple Store"
+    },
+    {
+      "spent": 1200,
+      "requisites": "...6452",
+      "time": "2023-12-21",
+      "market": "Yandex store"
+    },
+    {
+      "spent": 700,
+      "requisites": "...6452",
+      "time": "2023-12-21",
+      "market": "Apple Store"
+    },
+    {
+      "spent": 20,
+      "requisites": "...6452",
+      "time": "2023-12-21",
+      "market": "Yandex store"
+    },
+    {
+      "spent": 3040,
+      "requisites": "...6452",
+      "time": "2023-12-25",
+      "market": "Yandex store"
+    },
+    {
+      "spent": 210,
+      "requisites": "...6452",
+      "time": "2023-12-23",
+      "market": "Yandex store"
+    },
+    {
+      "spent": 100,
+      "requisites": "...6452",
+      "time": "2023-12-22",
+      "market": "Yandex store"
+    },
+    {
+      "spent": 1000,
+      "requisites": "...6452",
+      "time": "2023-12-20",
+      "market": "Yandex store"
+    },
+    {
+      "spent": 240,
+      "requisites": "...6452",
+      "time": "2023-12-24",
+      "market": "Yandex store"
+    }
+  ]
+}

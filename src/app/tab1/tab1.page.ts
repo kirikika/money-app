@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TypeOfCard } from '../debit-credit-info/debit-credit-info.component';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../components/auth/auth.service';
 
 @Component({
   selector: 'app-tab1',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
-  public name: string = 'Vladislav';
+  public name: string = '';
   public isShowTransaction: boolean = false;
   public cards2 = [
     {
@@ -25,10 +26,14 @@ export class Tab1Page implements OnInit {
     }
   ];
   constructor(
+    public _authService: AuthService,
   ) {}
 
   ngOnInit(): void {
-
+    this._authService.user$.subscribe(user => {
+      this.name = user.name;
+      console.log(user);
+    })
   }
 
   public showTransaction() {

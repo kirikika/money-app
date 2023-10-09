@@ -123,7 +123,9 @@ export class Tab2Page implements OnInit {
     this.filteredBalanceHistory
     .map((element) => this.datePipe.transform(element.time))
     .forEach((item, pos) => {
-      if (this.filteredBalanceHistory.map((element) => this.datePipe.transform(element.time)).indexOf(item) === pos){
+      if (this.filteredBalanceHistory.map((element) => 
+      this.datePipe.transform(element.time)).indexOf(item) === pos
+      ){
         this.filteredDates.push(item)
       }else{
         this.filteredDates.push('')

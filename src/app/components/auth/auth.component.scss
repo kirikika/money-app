@@ -34,6 +34,24 @@
 
     .input {
         margin-bottom: 20px;
+
+        .text {
+            color: #E0E0E0;
+            display: block;
+            flex-direction: column;
+            margin-bottom: 5px;
+
+        }
+        .inputData {
+            height: 50px;
+            width: 100%;
+            border: #28292B solid 1px;
+            border-radius: 8px;
+            background-color: #171719;
+            padding: 10px;
+
+        }
+
     }
 
     .btn {
@@ -55,8 +73,7 @@
 }
 
 .header {
-    display: flex;
-    align-items: center;
+
     
     padding: 30px;
     background-color: #121214;
@@ -65,14 +82,20 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 24px;
-
     color: #E0E0E0;
 
-    &__back {
-        height: 20px;
-        width: 20px;
+    .title {
         display: flex;
         align-items: center;
-        justify-content: center;
+        //flex-direction: row;
+
+        .header__back {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }

@@ -15,7 +15,8 @@ export class CardComponent  implements OnInit {
     spent: number,
     type: string,
     typeOfCard: string,
-    currency: string
+    currency: string,
+    cardowner: string
   } = {
     cardPicture: 'Tinkoff_1',
     bank: 'Tinkoff',
@@ -24,7 +25,8 @@ export class CardComponent  implements OnInit {
     spent: 45000,
     type: 'Debit',
     typeOfCard: 'MasterCard',
-    currency: '₽'
+    currency: '₽',
+    cardowner: 'Kostya'
   }
   constructor() { }
 
